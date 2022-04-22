@@ -51,8 +51,9 @@ void draw()
   movers[i].render();
   target.render(); 
   
+  //get direction of movers' position to target position
   PVector direction = PVector.sub(target.position, movers[i].position);
-  
-  movers[i].position.add(direction.normalize().mult(4));
+  //move to the direction 
+  movers[i].position.add(direction.normalize().mult(10));
   }
 }
